@@ -1,116 +1,41 @@
-/* =========================================================
-   IFECO PORTFOLIO — MAIN JAVASCRIPT
-========================================================= */
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-links");
 
-document.addEventListener("DOMContentLoaded", () => {
+function closeMenu() {
+    navMenu.classList.remove("active");
+    menuToggle.classList.remove("active");
 
-  // ------------------------------
-  // MOBILE NAVIGATION
-  // ------------------------------
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navMenu = document.querySelector(".nav-links");
-  const navLinks = document.querySelectorAll(".nav-links a");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Open navigation");
 
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navMenu.classList.toggle("active");
+    document.body.classList.remove("menu-open");
+}
 
-      menuToggle.classList.toggle("active", isOpen);
-      menuToggle.setAttribute("aria-expanded", isOpen);
-    });
+menuToggle.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("active");
 
-    // Close menu after clicking a navigation link
-    navLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        navMenu.classList.remove("active");
-        menuToggle.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-      });
-    });
-
-    // Close menu with Escape key
-    document.addEventListener("keydown", event => {
-      if (event.key === "Escape") {
-        navMenu.classList.remove("active");
-        menuToggle.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
-
-  // ------------------------------
-  // SMOOTH SCROLLING
-  // ------------------------------
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (event) {
-      const target = document.querySelector(this.getAttribute("href"));
-
-      if (target) {
-        event.preventDefault();
-
-        target.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
-      }
-    });
-  });
-
-  // ------------------------------
-  // SCROLL REVEAL ANIMATIONS
-  // ------------------------------
-  const revealElements = document.querySelectorAll(
-    ".section, .project-card, .skill-card, .about-card"
-  );
-
-  if ("IntersectionObserver" in window) {
-    const revealObserver = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("revealed");
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.12
-      }
+    menuToggle.classList.toggle("active", isOpen);
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
     );
 
-    revealElements.forEach(element => {
-      element.classList.add("reveal");
-      revealObserver.observe(element);
-    });
-  } else {
-    revealElements.forEach(element => {
-      element.classList.add("revealed");
-    });
-  }
+    document.body.classList.toggle("menu-open", isOpen);
+});
 
-  // ------------------------------
-  // PROJECT CARD INTERACTIONS
-  // ------------------------------
-  document.querySelectorAll(".project-card").forEach(card => {
-    const projectLink = card.querySelector(".project-link");
+navMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", closeMenu);
+});
 
-    if (projectLink) {
-      card.addEventListener("click", event => {
-        // Don't interfere with clicks on buttons or links
-        if (event.target.closest("a, button")) return;
-
-        projectLink.click();
-      });
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+        closeMenu();
     }
-  });
+});
 
-  // ------------------------------
-  // CURRENT YEAR
-  // ------------------------------
-  const yearElement = document.querySelector("#year");
-
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-  }
-
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 820) {
+        closeMenu();
+    }
 });
