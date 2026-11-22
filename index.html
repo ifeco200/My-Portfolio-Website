@@ -14,6 +14,7 @@
     <script src="js/main.js" defer></script>
 </head>
 <body>
+
     <a class="skip-link" href="#main-content">Skip to content</a>
 
     <header class="header">
@@ -27,14 +28,10 @@
             <a href="#contact">Contact</a>
         </nav>
 
-        <button
-            class="menu-toggle"
-            id="menu-toggle"
-            type="button"
+        <button class="menu-toggle" id="menu-toggle" type="button"
             aria-label="Open navigation menu"
             aria-controls="primary-navigation"
-            aria-expanded="false"
-        >
+            aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -42,22 +39,31 @@
     </header>
 
     <main id="main-content">
+
+        <!-- HERO -->
         <section id="home" class="hero">
             <div class="hero-content">
                 <p class="hero-tag"><span class="status-dot"></span> Curious mind. Creative developer.</p>
                 <p class="hero-kicker">HELLO, WORLD! I'M IFECO.</p>
+
                 <h1>I turn curiosity into things you can <span class="highlight">click.</span></h1>
+
                 <p class="hero-description">
                     I explore ideas, experiment with code, and build digital experiences
                     that make the internet a little more interesting. Still learning.
                     Always creating. Never standing still.
                 </p>
+
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Explore my work <span aria-hidden="true">↗</span></a>
-                    <a href="#about" class="btn btn-secondary">Get to know me <span aria-hidden="true">↓</span></a>
+                    <a href="#projects" class="btn btn-primary">Explore my work <span>↗</span></a>
+                    <a href="#about" class="btn btn-secondary">Get to know me <span>↓</span></a>
                 </div>
-                <div class="hero-meta" aria-label="Technologies and interests">
-                    <span>HTML</span><span>CSS</span><span>JAVASCRIPT</span><span>CREATIVITY</span>
+
+                <div class="hero-meta">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JAVASCRIPT</span>
+                    <span>CREATIVITY</span>
                 </div>
             </div>
 
@@ -69,9 +75,14 @@
                 <span class="hero-orbit orbit-one" aria-hidden="true"></span>
                 <span class="hero-orbit orbit-two" aria-hidden="true"></span>
             </div>
-            <div class="hero-bottom-note"><span>01</span> SCROLL TO EXPLORE <span class="scroll-line"></span></div>
+
+            <div class="hero-bottom-note">
+                <span>01</span> SCROLL TO EXPLORE <span class="scroll-line"></span>
+            </div>
         </section>
 
+
+        <!-- ABOUT -->
         <section id="about" class="about section-pad">
             <div class="section-heading">
                 <p class="section-label">A LITTLE ABOUT ME</p>
@@ -80,163 +91,383 @@
 
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-intro">I'm a frontend developer who enjoys turning ideas into functional, thoughtfully designed websites.</p>
-                    <p>My journey is driven by curiosity. I enjoy figuring out how things work, solving problems through code, and bringing designs to life with HTML, CSS and JavaScript.</p>
-                    <p>Every project gives me the opportunity to learn, improve my attention to detail, and challenge myself to build something better than the last.</p>
+                    <p class="about-intro">
+                        I'm a frontend developer who enjoys turning ideas into functional,
+                        thoughtfully designed websites.
+                    </p>
+
+                    <p>
+                        My journey is driven by curiosity. I enjoy figuring out how things
+                        work, solving problems through code, and bringing designs to life
+                        with HTML, CSS and JavaScript.
+                    </p>
+
+                    <p>
+                        Every project gives me the opportunity to learn, improve my
+                        attention to detail, and challenge myself to build something
+                        better than the last.
+                    </p>
                 </div>
 
                 <aside class="about-card">
                     <span class="about-card-icon" aria-hidden="true">✳</span>
                     <p class="card-eyebrow">THE MINDSET</p>
                     <h3>Always evolving.</h3>
-                    <p>I believe growth comes from practice, consistency, curiosity, and being willing to learn something new. That's the mindset I bring to every project.</p>
+                    <p>
+                        I believe growth comes from practice, consistency, curiosity,
+                        and being willing to learn something new. That's the mindset
+                        I bring to every project.
+                    </p>
                     <span class="about-card-mark" aria-hidden="true">IF / CO</span>
                 </aside>
             </div>
-            <div class="about-statement"><span>CURIOUS BY NATURE</span><span>CREATIVE BY PRACTICE</span><span>GROWING EVERY DAY</span></div>
+
+            <div class="about-statement">
+                <span>CURIOUS BY NATURE</span>
+                <span>CREATIVE BY PRACTICE</span>
+                <span>GROWING EVERY DAY</span>
+            </div>
         </section>
 
+
+        <!-- PROJECTS -->
         <section id="projects" class="projects section-pad">
             <div class="projects-topline">
                 <div class="section-heading">
                     <p class="section-label">SELECTED WORK · 2026</p>
                     <h2>Things I've<br><span class="highlight">built.</span></h2>
                 </div>
-                <p class="section-description">A collection of projects where I've explored design, development, functionality and the details that make websites feel complete.</p>
+
+                <p class="section-description">
+                    A collection of projects where I've explored design, development,
+                    functionality and the details that make websites feel complete.
+                </p>
             </div>
 
             <div class="project-grid">
+
+                <!-- PROJECT 01 -->
                 <article class="project-card">
                     <div class="project-number">01 <span>/ LANDING PAGE</span></div>
-                    <div class="project-preview preview-banking">
-                        <span class="preview-label">DIGITAL BANKING</span>
-                        <span class="preview-title">Banking,<br>made simpler.</span>
-                        <span class="preview-decoration" aria-hidden="true">↗</span>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-title-row"><h3>Digital Banking</h3><span class="project-arrow" aria-hidden="true">↗</span></div>
-                        <p>A modern banking landing page focused on clean design, clear content and a smooth user experience.</p>
-                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                        <div class="project-links"><a href="https://github.com/ifeco200/Digital-Banking-Landing-page" target="_blank" rel="noopener noreferrer">View source <span>↗</span></a></div>
-                    </div>
-                </article>
 
-                <article class="project-card">
-                    <div class="project-number">02 <span>/ CREATIVE LANDING PAGE</span></div>
-                    <div class="project-preview preview-sunnyside">
-                        <span class="preview-label">SUNNYSIDE</span>
-                        <span class="preview-title">Creative.<br>Bold.<br>Bright.</span>
-                        <span class="preview-decoration" aria-hidden="true">✳</span>
-                    </div>
+                    <a class="project-preview preview-banking"
+                       href="https://ifeco200.github.io/Digital-Banking-Landing-page/"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="Open Digital Banking live website">
+
+                        <img
+                            src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/drvrrf1ktzojmosdilxt.jpg"
+                            alt="Digital Banking website preview"
+                            loading="lazy">
+
+                        <span class="preview-open">View live site ↗</span>
+                    </a>
+
                     <div class="project-info">
-                        <div class="project-title-row"><h3>Sunnyside Agency</h3><span class="project-arrow" aria-hidden="true">↗</span></div>
-                        <p>A colorful creative agency website featuring bold typography, visual storytelling and responsive layouts.</p>
-                        <div class="project-tags"><span>HTML</span><span>CSS</span></div>
+                        <div class="project-title-row">
+                            <h3>Digital Banking</h3>
+                            <span class="project-arrow" aria-hidden="true">↗</span>
+                        </div>
+
+                        <p>A modern banking landing page focused on clean design, clear content and a smooth user experience.</p>
+
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+
                         <div class="project-links">
-                            <a href="https://ifeco200.github.io/sunnyside-landing-page/" target="_blank" rel="noopener noreferrer">Live site <span>↗</span></a>
-                            <a href="https://github.com/ifeco200/sunnyside-landing-page" target="_blank" rel="noopener noreferrer">Source <span>↗</span></a>
+                            <a href="https://ifeco200.github.io/Digital-Banking-Landing-page/" target="_blank" rel="noopener noreferrer">Live site ↗</a>
+                            <a href="https://github.com/ifeco200/Digital-Banking-Landing-page" target="_blank" rel="noopener noreferrer">View source ↗</a>
                         </div>
                     </div>
                 </article>
 
+
+                <!-- PROJECT 02 -->
+                <article class="project-card">
+                    <div class="project-number">02 <span>/ CREATIVE LANDING PAGE</span></div>
+
+                    <a class="project-preview preview-sunnyside"
+                       href="https://ifeco200.github.io/sunnyside-landing-page/"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="Open Sunnyside Agency live website">
+
+                        <img
+                            src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/wqzotbyfysz9pbfk9jus.jpg"
+                            alt="Sunnyside Agency website preview"
+                            loading="lazy">
+
+                        <span class="preview-open">View live site ↗</span>
+                    </a>
+
+                    <div class="project-info">
+                        <div class="project-title-row">
+                            <h3>Sunnyside Agency</h3>
+                            <span class="project-arrow" aria-hidden="true">↗</span>
+                        </div>
+
+                        <p>A colorful creative agency website featuring bold typography, visual storytelling and responsive layouts.</p>
+
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://ifeco200.github.io/sunnyside-landing-page/" target="_blank" rel="noopener noreferrer">Live site ↗</a>
+                            <a href="https://github.com/ifeco200/sunnyside-landing-page" target="_blank" rel="noopener noreferrer">Source ↗</a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <!-- PROJECT 03 -->
                 <article class="project-card">
                     <div class="project-number">03 <span>/ JAVASCRIPT TOOL</span></div>
-                    <div class="project-preview preview-password">
-                        <span class="preview-label">PASSWORD GENERATOR</span>
-                        <span class="preview-title password-text">••••••••••••</span>
-                        <span class="preview-decoration" aria-hidden="true">⌘</span>
-                    </div>
+
+                    <a class="project-preview preview-password"
+                       href="https://ifeco200.github.io/random-password-generator/"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="Open Random Password Generator live website">
+
+                        <img
+                            src="https://res.cloudinary.com/dz209s6jk/image/upload/v1661436134/Challenges/xt7ivwv5joqrphnncg0t.jpg"
+                            alt="Random Password Generator website preview"
+                            loading="lazy">
+
+                        <span class="preview-open">View live site ↗</span>
+                    </a>
+
                     <div class="project-info">
-                        <div class="project-title-row"><h3>Random Password Generator</h3><span class="project-arrow" aria-hidden="true">↗</span></div>
+                        <div class="project-title-row">
+                            <h3>Random Password Generator</h3>
+                            <span class="project-arrow" aria-hidden="true">↗</span>
+                        </div>
+
                         <p>A useful tool for generating random passwords with interactive controls and a copy-to-clipboard feature.</p>
-                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                        <div class="project-links"><a href="https://github.com/ifeco200/random-password-generator" target="_blank" rel="noopener noreferrer">View source <span>↗</span></a></div>
+
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://ifeco200.github.io/random-password-generator/" target="_blank" rel="noopener noreferrer">Live site ↗</a>
+                            <a href="https://github.com/ifeco200/random-password-generator" target="_blank" rel="noopener noreferrer">View source ↗</a>
+                        </div>
                     </div>
                 </article>
 
+
+                <!-- PROJECT 04 -->
                 <article class="project-card">
                     <div class="project-number">04 <span>/ E-COMMERCE</span></div>
-                    <div class="project-preview preview-ecommerce">
-                        <span class="preview-label">PRODUCT EXPERIENCE</span>
-                        <span class="preview-title">Sneakers.<br>Style.<br>Details.</span>
-                        <span class="preview-decoration" aria-hidden="true">＋</span>
-                    </div>
+
+                    <a class="project-preview preview-ecommerce"
+                       href="https://ifeco200.github.io/E-commernce-page/"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="Open E-commerce Product Page live website">
+
+                        <img
+                            src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/xde5z4efoocyw2mcuqod.jpg"
+                            alt="E-commerce product page website preview"
+                            loading="lazy">
+
+                        <span class="preview-open">View live site ↗</span>
+                    </a>
+
                     <div class="project-info">
-                        <div class="project-title-row"><h3>E-commerce Product Page</h3><span class="project-arrow" aria-hidden="true">↗</span></div>
+                        <div class="project-title-row">
+                            <h3>E-commerce Product Page</h3>
+                            <span class="project-arrow" aria-hidden="true">↗</span>
+                        </div>
+
                         <p>A product page with an image gallery, product selection and shopping cart interactions.</p>
-                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                        <div class="project-links"><a href="https://github.com/ifeco200/E-commernce-page" target="_blank" rel="noopener noreferrer">View source <span>↗</span></a></div>
+
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://ifeco200.github.io/E-commernce-page/" target="_blank" rel="noopener noreferrer">Live site ↗</a>
+                            <a href="https://github.com/ifeco200/E-commernce-page" target="_blank" rel="noopener noreferrer">View source ↗</a>
+                        </div>
                     </div>
                 </article>
 
+
+                <!-- PROJECT 05 -->
                 <article class="project-card">
                     <div class="project-number">05 <span>/ WEB DESIGN</span></div>
-                    <div class="project-preview preview-blogr">
-                        <span class="preview-label">BLOGR</span>
-                        <span class="preview-title">Publishing<br>for the future.</span>
-                        <span class="preview-decoration" aria-hidden="true">↗</span>
-                    </div>
+
+                    <a class="project-preview preview-blogr"
+                       href="https://ifeco200.github.io/blogr-landing-page/"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="Open Blogr Landing Page live website">
+
+                        <img
+                            src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/awqnouxukwefdkaqt5iq.jpg"
+                            alt="Blogr landing page website preview"
+                            loading="lazy">
+
+                        <span class="preview-open">View live site ↗</span>
+                    </a>
+
                     <div class="project-info">
-                        <div class="project-title-row"><h3>Blogr Landing Page</h3><span class="project-arrow" aria-hidden="true">↗</span></div>
+                        <div class="project-title-row">
+                            <h3>Blogr Landing Page</h3>
+                            <span class="project-arrow" aria-hidden="true">↗</span>
+                        </div>
+
                         <p>A responsive landing page with modern navigation, structured content and a distinctive visual identity.</p>
-                        <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-                        <div class="project-links"><a href="https://github.com/ifeco200/blogr-landing-page" target="_blank" rel="noopener noreferrer">View source <span>↗</span></a></div>
+
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://ifeco200.github.io/blogr-landing-page/" target="_blank" rel="noopener noreferrer">Live site ↗</a>
+                            <a href="https://github.com/ifeco200/blogr-landing-page" target="_blank" rel="noopener noreferrer">View source ↗</a>
+                        </div>
                     </div>
                 </article>
 
+
+                <!-- PROJECT 06 -->
                 <article class="project-card">
                     <div class="project-number">06 <span>/ RESPONSIVE DESIGN</span></div>
-                    <div class="project-preview preview-bento">
-                        <span class="preview-label">BENTO GRID</span>
-                        <span class="preview-title">A different<br>kind of layout.</span>
-                        <span class="preview-decoration" aria-hidden="true">▦</span>
-                    </div>
+
+                    <a class="project-preview preview-bento"
+                       href="https://ifeco200.github.io/Bento-landing-page/"
+                       target="_blank" rel="noopener noreferrer"
+                       aria-label="Open Bento Grid live website">
+
+                        <img
+                            src="https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto,w_700/Challenges/tvfhkjoksej6aohdaaci.jpg"
+                            alt="Bento Grid website preview"
+                            loading="lazy">
+
+                        <span class="preview-open">View live site ↗</span>
+                    </a>
+
                     <div class="project-info">
-                        <div class="project-title-row"><h3>Bento Grid</h3><span class="project-arrow" aria-hidden="true">↗</span></div>
+                        <div class="project-title-row">
+                            <h3>Bento Grid</h3>
+                            <span class="project-arrow" aria-hidden="true">↗</span>
+                        </div>
+
                         <p>A modern grid-based layout exploring visual hierarchy, responsive design and modular content.</p>
-                        <div class="project-tags"><span>HTML</span><span>CSS</span></div>
-                        <div class="project-links"><a href="https://github.com/ifeco200/Bento-landing-page" target="_blank" rel="noopener noreferrer">View source <span>↗</span></a></div>
+
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://ifeco200.github.io/Bento-landing-page/" target="_blank" rel="noopener noreferrer">Live site ↗</a>
+                            <a href="https://github.com/ifeco200/Bento-landing-page" target="_blank" rel="noopener noreferrer">View source ↗</a>
+                        </div>
                     </div>
                 </article>
+
             </div>
-            <p class="projects-footnote">A small selection of what I've been learning and building. More experiments are always in progress.</p>
+
+            <p class="projects-footnote">
+                A small selection of what I've been learning and building.
+                More experiments are always in progress.
+            </p>
         </section>
 
+
+        <!-- SKILLS -->
         <section id="skills" class="skills section-pad">
             <div class="skills-heading-wrap">
                 <div class="section-heading">
                     <p class="section-label">MY TOOLKIT</p>
                     <h2>Tools I use.<br><span class="highlight">Skills I build.</span></h2>
                 </div>
-                <p class="section-description">The technologies and habits I use to turn ideas into responsive, interactive web experiences.</p>
+
+                <p class="section-description">
+                    The technologies and habits I use to turn ideas into responsive,
+                    interactive web experiences.
+                </p>
             </div>
 
             <div class="skills-grid">
-                <article class="skill-item"><span class="skill-number">01</span><div><h3>HTML5</h3><p>Semantic structure and accessible web content.</p></div><span class="skill-symbol">⌘</span></article>
-                <article class="skill-item"><span class="skill-number">02</span><div><h3>CSS3</h3><p>Layouts, responsive design and visual styling.</p></div><span class="skill-symbol">✳</span></article>
-                <article class="skill-item"><span class="skill-number">03</span><div><h3>JavaScript</h3><p>Interactive features and dynamic functionality.</p></div><span class="skill-symbol">JS</span></article>
-                <article class="skill-item"><span class="skill-number">04</span><div><h3>Git & GitHub</h3><p>Version control, repositories and deployment.</p></div><span class="skill-symbol">⌁</span></article>
-                <article class="skill-item"><span class="skill-number">05</span><div><h3>Responsive Design</h3><p>Building layouts for different screen sizes.</p></div><span class="skill-symbol">▣</span></article>
-                <article class="skill-item"><span class="skill-number">06</span><div><h3>Problem Solving</h3><p>Debugging, experimenting and improving solutions.</p></div><span class="skill-symbol">↗</span></article>
+                <article class="skill-item">
+                    <span class="skill-number">01</span>
+                    <div><h3>HTML5</h3><p>Semantic structure and accessible web content.</p></div>
+                    <span class="skill-symbol">⌘</span>
+                </article>
+
+                <article class="skill-item">
+                    <span class="skill-number">02</span>
+                    <div><h3>CSS3</h3><p>Layouts, responsive design and visual styling.</p></div>
+                    <span class="skill-symbol">✳</span>
+                </article>
+
+                <article class="skill-item">
+                    <span class="skill-number">03</span>
+                    <div><h3>JavaScript</h3><p>Interactive features and dynamic functionality.</p></div>
+                    <span class="skill-symbol">JS</span>
+                </article>
+
+                <article class="skill-item">
+                    <span class="skill-number">04</span>
+                    <div><h3>Git & GitHub</h3><p>Version control, repositories and deployment.</p></div>
+                    <span class="skill-symbol">⌁</span>
+                </article>
+
+                <article class="skill-item">
+                    <span class="skill-number">05</span>
+                    <div><h3>Responsive Design</h3><p>Building layouts for different screen sizes.</p></div>
+                    <span class="skill-symbol">▣</span>
+                </article>
+
+                <article class="skill-item">
+                    <span class="skill-number">06</span>
+                    <div><h3>Problem Solving</h3><p>Debugging, experimenting and improving solutions.</p></div>
+                    <span class="skill-symbol">↗</span>
+                </article>
             </div>
-            <div class="skills-signoff"><span>KEEP LEARNING</span><span class="signoff-star">✳</span><span>KEEP BUILDING</span></div>
+
+            <div class="skills-signoff">
+                <span>KEEP LEARNING</span>
+                <span class="signoff-star">✳</span>
+                <span>KEEP BUILDING</span>
+            </div>
         </section>
 
-        <section id="contact" class="contact section-pad">
-            <div class="contact-inner">
-                <p class="section-label">HAVE A PROJECT IN MIND?</p>
-                <h2>Let's make<br><span>something matter.</span></h2>
-                <p class="contact-description">I'm always interested in learning, exchanging ideas and exploring creative ways to bring a good idea to life.</p>
-                <a class="contact-link" href="https://github.com/ifeco200" target="_blank" rel="noopener noreferrer">Connect with me on GitHub <span aria-hidden="true">↗</span></a>
-            </div>
-            <span class="contact-orbit" aria-hidden="true">IF / CO</span>
-        </section>
-    </main>
 
-    <footer class="footer">
-        <a href="#home" class="footer-logo">ifeco<span>.</span></a>
-        <p>© 2026 Ifeco. Built with curiosity, creativity and code.</p>
-        <a href="#home" class="back-to-top">BACK TO TOP ↑</a>
-    </footer>
+            <!-- CONTACT -->
+<section id="contact" class="contact section-pad">
+    <div class="contact-inner">
+        <p class="section-label">HAVE A PROJECT IN MIND?</p>
+
+        <h2>Let's make<br><span>something matter.</span></h2>
+
+        <p class="contact-description">
+            I'm always interested in learning, exchanging ideas and exploring
+            creative ways to bring a good idea to life.
+        </p>
+
+        <a class="contact-link"
+           href="https://github.com/ifeco200"
+           target="_blank" rel="noopener noreferrer">
+            Connect with me on GitHub <span aria-hidden="true">↗</span>
+        </a>
+    </div>
+
+    <span class="contact-orbit" aria-hidden="true">IF / CO</span>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <a href="#home" class="footer-logo">ifeco<span>.</span></a>
+
+    <p>© 2026 Ifeco. Built with curiosity, creativity and code.</p>
+
+    <a href="#home" class="back-to-top">BACK TO TOP ↑</a>
+</footer>
+
+</main>
+
 </body>
 </html>
