@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" fill="none">
+  <defs>
+    <linearGradient id="ring" x1="120" y1="120" x2="790" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C8B4FF" stop-opacity=".7"/>
+      <stop offset=".55" stop-color="#805BC8" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#D9CBFF" stop-opacity=".55"/>
+    </linearGradient>
+
+    <radialGradient id="orb" cx="0" cy="0" r="1" gradientTransform="matrix(330 0 0 330 460 450)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9C79E8" stop-opacity=".2"/>
+      <stop offset="1" stop-color="#9C79E8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <circle cx="460" cy="450" r="365" fill="url(#orb)"/>
+  <circle cx="460" cy="450" r="310" stroke="url(#ring)" stroke-opacity=".38"/>
+  <circle cx="460" cy="450" r="265" stroke="url(#ring)" stroke-opacity=".2" stroke-dasharray="3 12"/>
+
+  <ellipse cx="460" cy="450" rx="390" ry="230" transform="rotate(-28 460 450)" stroke="url(#ring)" stroke-opacity=".32"/>
+  <ellipse cx="460" cy="450" rx="390" ry="230" transform="rotate(58 460 450)" stroke="url(#ring)" stroke-opacity=".18"/>
+
+  <path d="M460 74v42M460 784v42M84 450h42M794 450h42" stroke="#BCA5FF" stroke-opacity=".55" stroke-width="2"/>
+
+  <circle cx="748" cy="250" r="7" fill="#C5B1FF"/>
+  <circle cx="190" cy="670" r="5" fill="#9C7DE4"/>
+  <circle cx="690" cy="720" r="4" fill="#D7C8FF"/>
+
+  <path d="m706 158 8 17 18 8-18 8-8 18-8-18-18-8 18-8 8-17Z" fill="#BCA5FF" fill-opacity=".72"/>
+</svg>

@@ -1,687 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090910">
+  <meta name="description" content="Ifeco — Frontend developer creating thoughtful, responsive and interactive digital experiences.">
+  <title>ifeco. — Frontend Developer</title>
 
-    <meta name="description" content="Ifeco — Frontend Developer crafting beautiful and interactive digital experiences.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <title>ifeco. | Frontend Developer</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="ifeco home">
+        ifeco<span>.</span>
+      </a>
 
-    <header class="site-header">
-        <nav class="navbar">
-            <a href="#home" class="logo">ifeco<span>.</span></a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="nav-menu"
+      >
+        <span></span>
+        <span></span>
+      </button>
 
-            <button class="menu-toggle"
-                aria-label="Open navigation"
-                aria-expanded="false"
-                aria-controls="nav-menu">
-                <span></span>
-                <span></span>
-            </button>
+      <div class="nav-links" id="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
 
-            <div class="nav-links" id="nav-menu">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+        <a
+          class="nav-cta"
+          href="https://wa.me/2349064261608"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Let's talk <span>↗</span>
+        </a>
+      </div>
+    </nav>
+  </header>
 
-                <a href="https://wa.me/2349064261608"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="nav-contact">
-                    Let's talk ↗
-                </a>
-            </div>
-        </nav>
-    </header>
+  <main>
 
-    <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="hero-art" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
 
-        <!-- HERO -->
-        <section class="hero" id="home">
+      <div class="hero-inner container">
 
-            <div class="hero-background"></div>
-            <div class="hero-overlay"></div>
+        <div class="hero-copy">
+          <p class="availability">
+            <span class="availability-dot"></span>
+            OPEN TO CREATIVE OPPORTUNITIES
+          </p>
 
-            <div class="hero-content">
+          <p class="hero-kicker">HELLO, I'M IFECO</p>
 
-                <p class="eyebrow">
-                    <span class="status-dot"></span>
-                    AVAILABLE FOR CREATIVE OPPORTUNITIES
-                </p>
+          <h1>
+            I turn ideas into
+            <span>digital experiences.</span>
+          </h1>
 
-                <p class="hero-intro">HELLO, I'M IFECO</p>
+          <p class="hero-description">
+            I’m a frontend developer who loves bringing ideas to life through
+            thoughtful design, clean code and interactive experiences that feel
+            just as good as they look.
+          </p>
 
-                <h1>
-                    I build digital
-                    <span>experiences</span>
-                    that make an impact.
-                </h1>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">
+              Explore my work <span>↗</span>
+            </a>
 
-                <p class="hero-description">
-                    I'm a frontend developer passionate about transforming
-                    ideas into beautiful, interactive and responsive websites.
-                    I build, experiment and bring concepts to life through code.
-                </p>
+            <a class="button button-quiet" href="#contact">
+              Let's connect <span>↗</span>
+            </a>
+          </div>
 
-                <div class="hero-actions">
-                    <a href="#projects" class="button button-primary">
-                        Explore my work ↗
-                    </a>
+          <div class="skill-line" aria-label="Core skills">
+            <span>HTML5</span>
+            <i></i>
+            <span>CSS3</span>
+            <i></i>
+            <span>JAVASCRIPT</span>
+            <i></i>
+            <span>RESPONSIVE DESIGN</span>
+          </div>
+        </div>
 
-                    <a href="#contact" class="button button-outline">
-                        Let's connect
-                    </a>
-                </div>
+        <div class="hero-portrait-wrap" aria-label="Portrait of Ifeco">
+          <div class="portrait-orbit orbit-one"></div>
+          <div class="portrait-orbit orbit-two"></div>
 
-                <div class="hero-skills">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JAVASCRIPT</span>
-                    <span>RESPONSIVE DESIGN</span>
-                </div>
+          <div class="portrait-frame">
+            <img
+              src="image/profile.jpeg"
+              alt="Ifeco, frontend developer"
+              class="hero-portrait"
+            >
+          </div>
 
-            </div>
+          <span class="portrait-note">
+            <span class="note-spark">✳</span>
+            DESIGN-MINDED<br>
+            DEVELOPER
+          </span>
 
-            <div class="hero-bottom">
-                <span>01 — PERSONAL PORTFOLIO</span>
-                <a href="#about">SCROLL TO DISCOVER ↓</a>
-            </div>
+          <span class="portrait-index">01 / 04</span>
+        </div>
 
-        </section>
+      </div>
 
+      <div class="hero-footer container">
+        <span>INDEPENDENT FRONTEND DEVELOPER</span>
+        <a href="#about">
+          SCROLL TO EXPLORE <span>↓</span>
+        </a>
+      </div>
+    </section>
 
-        <!-- ABOUT -->
-        <section class="section" id="about">
+    <!-- ABOUT SECTION -->
+    <section class="about section-space" id="about">
+      <div class="container">
 
-            <div class="section-label">01 / ABOUT ME</div>
+        <div class="section-topline">
+          <span>01 / A LITTLE ABOUT ME</span>
+          <span>THE PERSON BEHIND THE PIXELS</span>
+        </div>
 
-            <div class="about-content">
-
-                <div>
-                    <p class="eyebrow">A LITTLE INTRODUCTION</p>
-
-                    <h2>
-                        Curiosity turns ideas into
-                        <span>reality.</span>
-                    </h2>
-                </div>
-
-                <div class="about-text">
-                    <p>
-                        I'm Ifeco, a frontend developer who enjoys creating
-                        digital experiences that are visually engaging,
-                        functional and easy to use.
-                    </p>
-
-                    <p>
-                        I believe great websites should look beautiful,
-                        work smoothly and feel effortless to explore.
-                        Every project is an opportunity to learn, improve
-                        and create something meaningful.
-                    </p>
-
-                    <a href="#contact" class="text-link">
-                        Let's work together ↗
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- PROJECTS -->
-        <section class="section projects-section" id="projects">
-
-            <div class="section-label">02 / SELECTED WORK</div>
-
-            <div class="section-heading">
-                <div>
-                    <p class="eyebrow">MY CREATIVE SPACE</p>
-                    <h2>Things I've <span>built.</span></h2>
-                </div>
-
-                <p>
-                    A collection of projects, experiments and ideas
-                    brought to life through code.
-                </p>
-            </div>
-
-            <div class="project-grid">
-
-                <a class="project-card"
-                   href="https://ifeco200.github.io/Digital-Banking-Landing-page/"
-                   target="_blank" rel="noopener noreferrer">
-                    <div class="project-preview banking">
-                        <span class="preview-mark">01</span>
-                        <div class="preview-content">
-                            <span>DIGITAL FINANCE</span>
-                            <strong>Banking<br>made better.</strong>
-                            <small>Explore project ↗</small>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div>
-                            <h3>Digital Banking</h3>
-                            <p>Modern banking landing page</p>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-                </a>
-
-
-                <a class="project-card"
-                   href="https://ifeco200.github.io/sunnyside-landing-page/"
-                   target="_blank" rel="noopener noreferrer">
-                    <div class="project-preview sunnyside">
-                        <span class="preview-mark">02</span>
-                        <div class="preview-content">
-                            <span>CREATIVE AGENCY</span>
-                            <strong>We make<br>great things.</strong>
-                            <small>Explore project ↗</small>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div>
-                            <h3>Sunnyside</h3>
-                            <p>Creative agency landing page</p>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-                </a>
-
-
-                <a class="project-card"
-                   href="https://ifeco200.github.io/random-password-generator/"
-                   target="_blank" rel="noopener noreferrer">
-                    <div class="project-preview password">
-                        <span class="preview-mark">03</span>
-                        <div class="preview-content">
-                            <span>SECURITY TOOL</span>
-                            <strong>Stronger<br>passwords.</strong>
-                            <small>Explore project ↗</small>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div>
-                            <h3>Password Generator</h3>
-                            <p>Interactive JavaScript tool</p>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-                </a>
-
-
-                <a class="project-card"
-                   href="https://ifeco200.github.io/E-commernce-page/"
-                   target="_blank" rel="noopener noreferrer">
-                    <div class="project-preview ecommerce">
-                        <span class="preview-mark">04</span>
-                        <div class="preview-content">
-                            <span>ONLINE SHOPPING</span>
-                            <strong>Discover<br>your style.</strong>
-                            <small>Explore project ↗</small>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div>
-                            <h3>E-commerce Product Page</h3>
-                            <p>Product-focused web experience</p>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-                </a>
-
-
-                <a class="project-card"
-                   href="https://ifeco200.github.io/blogr-landing-page/"
-                   target="_blank" rel="noopener noreferrer">
-                    <div class="project-preview blogr">
-                        <span class="preview-mark">05</span>
-                        <div class="preview-content">
-                            <span>DIGITAL PUBLISHING</span>
-                            <strong>Blogging<br>reimagined.</strong>
-                            <small>Explore project ↗</small>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div>
-                            <h3>Blogr</h3>
-                            <p>Modern publishing landing page</p>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-                </a>
-
-
-                <a class="project-card"
-                   href="https://ifeco200.github.io/Bento-landing-page/"
-                   target="_blank" rel="noopener noreferrer">
-                    <div class="project-preview bento">
-                        <span class="preview-mark">06</span>
-                        <div class="preview-content">
-                            <span>LAYOUT EXPERIMENT</span>
-                            <strong>Ideas in<br>every detail.</strong>
-                            <small>Explore project ↗</small>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div>
-                            <h3>Bento Grid</h3>
-                            <p>Creative responsive grid layout</p>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-                </a>
-
-            </div>
-        </section>
-
-
-        <!-- CONTACT -->
-        <section class="contact-section" id="contact">
-
-            <div class="section-label">03 / GET IN TOUCH</div>
-
-            <p class="eyebrow">HAVE AN IDEA?</p>
-
-            <h2>
-                Let's create something
-                <span>remarkable.</span>
-            </h2>
-
-            <p class="contact-description">
-                Have a project in mind or simply want to connect?
-                I'd love to hear from you.
+        <div class="about-grid">
+          <div>
+            <p class="eyebrow">
+              CURIOUS BY NATURE. CREATIVE BY CHOICE.
             </p>
 
-            <div class="contact-actions">
-
-                <a href="https://wa.me/2349064261608"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="button button-primary">
-                    WhatsApp me ↗
-                </a>
-
-                <a href="https://github.com/ifeco200"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="button button-outline">
-                    Visit my GitHub ↗
-                </a>
-
-            </div>
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <a href="#home" class="logo">ifeco<span>.</span></a>
-
-        <p>Designed & built with intention by Ifeco.</p>
-
-        <span>© 2026 — ALL RIGHTS RESERVED</span>
-    </footer>
-
-
-    <script src="js/main.js" defer></script>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Ifeco — Frontend Developer crafting beautiful and interactive digital experiences.">
-
-    <title>ifeco. | Frontend Developer</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-    <header class="site-header">
-        <nav class="navbar">
-            <a href="#home" class="logo">ifeco<span>.</span></a>
-
-            <button class="menu-toggle"
-                aria-label="Open navigation"
-                aria-expanded="false"
-                aria-controls="nav-menu">
-                <span></span>
-                <span></span>
-            </button>
-
-            <div class="nav-links" id="nav-menu">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-
-                <a href="https://wa.me/2349064261608"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="nav-contact">
-                    Let's talk ↗
-                </a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-
-        <!-- HERO -->
-        <section class="hero" id="home">
-
-            <div class="hero-background"></div>
-            <div class="hero-overlay"></div>
-
-            <div class="hero-content">
-
-                <p class="eyebrow">
-                    <span class="status-dot"></span>
-                    AVAILABLE FOR CREATIVE OPPORTUNITIES
-                </p>
-
-                <p class="hero-intro">HELLO, I'M IFECO</p>
-
-                <h1>
-                    I build digital
-                    <span>experiences</span>
-                    that make an impact.
-                </h1>
-
-                <p class="hero-description">
-                    I'm a frontend developer passionate about transforming
-                    ideas into beautiful, interactive and responsive websites.
-                    I build, experiment and bring concepts to life through code.
-                </p>
-
-                <div class="hero-actions">
-                    <a href="#projects" class="button button-primary">
-                        Explore my work ↗
-                    </a>
-
-                    <a href="#contact" class="button button-outline">
-                        Let's connect
-                    </a>
-                </div>
-
-                <div class="hero-skills">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JAVASCRIPT</span>
-                    <span>RESPONSIVE DESIGN</span>
-                </div>
-
-            </div>
-
-            <div class="hero-bottom">
-                <span>01 — PERSONAL PORTFOLIO</span>
-                <a href="#about">SCROLL TO DISCOVER ↓</a>
-            </div>
-
-        </section>
-
-
-        <!-- ABOUT -->
-        <section class="section" id="about">
-
-            <div class="section-label">01 / ABOUT ME</div>
-
-            <div class="about-content">
-
-                <div>
-                    <p class="eyebrow">A LITTLE INTRODUCTION</p>
-
-                    <h2>
-                        Curiosity turns ideas into
-                        <span>reality.</span>
-                    </h2>
-                </div>
-
-                <div class="about-text">
-                    <p>
-                        I'm Ifeco, a frontend developer who enjoys creating
-                        digital experiences that are visually engaging,
-                        functional and easy to use.
-                    </p>
-
-                    <p>
-                        I believe great websites should look beautiful,
-                        work smoothly and feel effortless to explore.
-                        Every project is an opportunity to learn, improve
-                        and create something meaningful.
-                    </p>
-
-                    <a href="#contact" class="text-link">
-                        Let's work together ↗
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- PROJECTS -->
-        <section class="section projects-section" id="projects">
-
-            <div class="section-label">02 / SELECTED WORK</div>
-
-            <div class="section-heading">
-                <div>
-                    <p class="eyebrow">MY CREATIVE SPACE</p>
-                    <h2>Things I've <span>built.</span></h2>
-                </div>
-
-                <p>
-                    A collection of projects, experiments and ideas
-                    brought to life through code.
-                </p>
-            </div>
-
-            <div class="project-grid">
-
-                <a class="project-card"
-                   href="https://ifeco200.github.io/Digital-Banking-Landing-page/"
-                   target="_blank" rel="noopener noreferrer">
-                    <div class="project-preview banking">
-                        <span class="preview-mark">01</span>
-                        <div class="preview-content">
-                            <span>DIGITAL FINANCE</span>
-                            <strong>Banking<br>made better.</strong>
-                            <small>Explore project ↗</small>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div>
-                            <h3>Digital Banking</h3>
-                            <p>Modern banking landing page</p>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-                </a>
-
-
-                <a class="project-card"
-                   href="https://ifeco200.github.io/sunnyside-landing-page/"
-                   target="_blank" rel="noopener noreferrer">
-                    <div class="project-preview sunnyside">
-                        <span class="preview-mark">02</span>
-                        <div class="preview-content">
-                            <span>CREATIVE AGENCY</span>
-                            <strong>We make<br>great things.</strong>
-                            <small>Explore project ↗</small>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div>
-                            <h3>Sunnyside</h3>
-                            <p>Creative agency landing page</p>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-                </a>
-
-
-                <a class="project-card"
-                   href="https://ifeco200.github.io/random-password-generator/"
-                   target="_blank" rel="noopener noreferrer">
-                    <div class="project-preview password">
-                        <span class="preview-mark">03</span>
-                        <div class="preview-content">
-                            <span>SECURITY TOOL</span>
-                            <strong>Stronger<br>passwords.</strong>
-                            <small>Explore project ↗</small>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div>
-                            <h3>Password Generator</h3>
-                            <p>Interactive JavaScript tool</p>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-                </a>
-
-
-                <a class="project-card"
-                   href="https://ifeco200.github.io/E-commernce-page/"
-                   target="_blank" rel="noopener noreferrer">
-                    <div class="project-preview ecommerce">
-                        <span class="preview-mark">04</span>
-                        <div class="preview-content">
-                            <span>ONLINE SHOPPING</span>
-                            <strong>Discover<br>your style.</strong>
-                            <small>Explore project ↗</small>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div>
-                            <h3>E-commerce Product Page</h3>
-                            <p>Product-focused web experience</p>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-                </a>
-
-
-                <a class="project-card"
-                   href="https://ifeco200.github.io/blogr-landing-page/"
-                   target="_blank" rel="noopener noreferrer">
-                    <div class="project-preview blogr">
-                        <span class="preview-mark">05</span>
-                        <div class="preview-content">
-                            <span>DIGITAL PUBLISHING</span>
-                            <strong>Blogging<br>reimagined.</strong>
-                            <small>Explore project ↗</small>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div>
-                            <h3>Blogr</h3>
-                            <p>Modern publishing landing page</p>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-                </a>
-
-
-                <a class="project-card"
-                   href="https://ifeco200.github.io/Bento-landing-page/"
-                   target="_blank" rel="noopener noreferrer">
-                    <div class="project-preview bento">
-                        <span class="preview-mark">06</span>
-                        <div class="preview-content">
-                            <span>LAYOUT EXPERIMENT</span>
-                            <strong>Ideas in<br>every detail.</strong>
-                            <small>Explore project ↗</small>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <div>
-                            <h3>Bento Grid</h3>
-                            <p>Creative responsive grid layout</p>
-                        </div>
-                        <span class="project-arrow">↗</span>
-                    </div>
-                </a>
-
-            </div>
-        </section>
-
-
-        <!-- CONTACT -->
-        <section class="contact-section" id="contact">
-
-            <div class="section-label">03 / GET IN TOUCH</div>
-
-            <p class="eyebrow">HAVE AN IDEA?</p>
-
             <h2>
-                Let's create something
-                <span>remarkable.</span>
+              Good design should feel
+              <span>effortless.</span>
             </h2>
+          </div>
 
-            <p class="contact-description">
-                Have a project in mind or simply want to connect?
-                I'd love to hear from you.
+          <div class="about-copy">
+            <p>
+              I’m Ifeco, a frontend developer who enjoys turning concepts
+              into clear, engaging and useful digital experiences.
             </p>
 
-            <div class="contact-actions">
+            <p>
+              I care about the details: how a layout responds on a phone,
+              how an interaction feels, how quickly someone understands
+              a page, and how every element works together.
+            </p>
 
-                <a href="https://wa.me/2349064261608"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="button button-primary">
-                    WhatsApp me ↗
-                </a>
+            <p>
+              Every project helps me learn something new and become a
+              better problem-solver.
+            </p>
 
-                <a href="https://github.com/ifeco200"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="button button-outline">
-                    Visit my GitHub ↗
-                </a>
+            <a class="text-link" href="#contact">
+              Have something in mind? Let's talk <span>↗</span>
+            </a>
+          </div>
+        </div>
 
+        <div class="principles">
+          <div>
+            <span class="principle-number">01</span>
+            <strong>Thoughtful design</strong>
+            <p>Interfaces with clarity, purpose and personality.</p>
+          </div>
+
+          <div>
+            <span class="principle-number">02</span>
+            <strong>Clean development</strong>
+            <p>Structured code and details that work together.</p>
+          </div>
+
+          <div>
+            <span class="principle-number">03</span>
+            <strong>Always learning</strong>
+            <p>Curiosity that keeps every new build moving forward.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects section-space" id="projects">
+      <div class="container">
+
+        <div class="section-topline">
+          <span>02 / SELECTED WORK</span>
+          <span>A FEW THINGS I'VE BUILT</span>
+        </div>
+
+        <div class="projects-heading">
+          <div>
+            <p class="eyebrow">FROM CONCEPT TO BROWSER</p>
+            <h2>Made with <span>curiosity.</span></h2>
+          </div>
+
+          <p>
+            Explore a selection of my frontend projects.
+            Select any preview to open the live website.
+          </p>
+        </div>
+
+        <div class="project-grid">
+
+          <!-- PROJECT 1 -->
+          <a
+            class="project-card"
+            href="https://ifeco200.github.io/Digital-Banking-Landing-page/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Digital Banking project"
+          >
+            <div class="project-image">
+              <img
+                src="https://image.thum.io/get/width/900/crop/620/noanimate/https://ifeco200.github.io/Digital-Banking-Landing-page/"
+                alt="Live website preview of Digital Banking"
+                loading="lazy"
+              >
+              <span class="image-open">VIEW LIVE PROJECT ↗</span>
+              <span class="project-count">01</span>
             </div>
-        </section>
 
-    </main>
+            <div class="project-meta">
+              <div>
+                <h3>Digital Banking</h3>
+                <p>Modern finance landing page</p>
+              </div>
+              <span class="project-arrow">↗</span>
+            </div>
+          </a>
 
+          <!-- PROJECT 2 -->
+          <a
+            class="project-card"
+            href="https://ifeco200.github.io/sunnyside-landing-page/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Sunnyside project"
+          >
+            <div class="project-image">
+              <img
+                src="https://image.thum.io/get/width/900/crop/620/noanimate/https://ifeco200.github.io/sunnyside-landing-page/"
+                alt="Live website preview of Sunnyside"
+                loading="lazy"
+              >
+              <span class="image-open">VIEW LIVE PROJECT ↗</span>
+              <span class="project-count">02</span>
+            </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <a href="#home" class="logo">ifeco<span>.</span></a>
+            <div class="project-meta">
+              <div>
+                <h3>Sunnyside</h3>
+                <p>Creative agency landing page</p>
+              </div>
+              <span class="project-arrow">↗</span>
+            </div>
+          </a>
 
-        <p>Designed & built with intention by Ifeco.</p>
+          <!-- PROJECT 3 -->
+          <a
+            class="project-card"
+            href="https://ifeco200.github.io/random-password-generator/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Random Password Generator project"
+          >
+            <div class="project-image">
+              <img
+                src="https://image.thum.io/get/width/900/crop/620/noanimate/https://ifeco200.github.io/random-password-generator/"
+                alt="Live website preview of Random Password Generator"
+                loading="lazy"
+              >
+              <span class="image-open">VIEW LIVE PROJECT ↗</span>
+              <span class="project-count">03</span>
+            </div>
 
-        <span>© 2026 — ALL RIGHTS RESERVED</span>
-    </footer>
+            <div class="project-meta">
+              <div>
+                <h3>Password Generator</h3>
+                <p>Interactive JavaScript tool</p>
+              </div>
+              <span class="project-arrow">↗</span>
+            </div>
+          </a>
 
+          <!-- PROJECT 4 -->
+          <a
+            class="project-card"
+            href="https://ifeco200.github.io/E-commernce-page/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open E-commerce Product Page project"
+          >
+            <div class="project-image">
+              <img
+                src="https://image.thum.io/get/width/900/crop/620/noanimate/https://ifeco200.github.io/E-commernce-page/"
+                alt="Live website preview of E-commerce Product Page"
+                loading="lazy"
+              >
+              <span class="image-open">VIEW LIVE PROJECT ↗</span>
+              <span class="project-count">04</span>
+            </div>
 
-    <script src="js/main.js" defer></script>
+            <div class="project-meta">
+              <div>
+                <h3>E-commerce Product Page</h3>
+                <p>Product-focused web experience</p>
+              </div>
+              <span class="project-arrow">↗</span>
+            </div>
+          </a>
+
+          <!-- PROJECT 5 -->
+          <a
+            class="project-card"
+            href="https://ifeco200.github.io/blogr-landing-page/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Blogr project"
+          >
+            <div class="project-image">
+              <img
+                src="https://image.thum.io/get/width/900/crop/620/noanimate/https://ifeco200.github.io/blogr-landing-page/"
+                alt="Live website preview of Blogr"
+                loading="lazy"
+              >
+              <span class="image-open">VIEW LIVE PROJECT ↗</span>
+              <span class="project-count">05</span>
+            </div>
+
+            <div class="project-meta">
+              <div>
+                <h3>Blogr</h3>
+                <p>Modern publishing landing page</p>
+              </div>
+              <span class="project-arrow">↗</span>
+            </div>
+          </a>
+
+          <!-- PROJECT 6 -->
+          <a
+            class="project-card"
+            href="https://ifeco200.github.io/Bento-landing-page/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open Bento Grid project"
+          >
+            <div class="project-image">
+              <img
+                src="https://image.thum.io/get/width/900/crop/620/noanimate/https://ifeco200.github.io/Bento-landing-page/"
+                alt="Live website preview of Bento Grid"
+                loading="lazy"
+              >
+              <span class="image-open">VIEW LIVE PROJECT ↗</span>
+              <span class="project-count">06</span>
+            </div>
+
+            <div class="project-meta">
+              <div>
+                <h3>Bento Grid</h3>
+                <p>Creative responsive grid layout</p>
+              </div>
+              <span class="project-arrow">↗</span>
+            </div>
+          </a>
+
+        </div>
+
+        <p class="preview-note">
+          Project previews are generated from the live websites.
+          If a preview service is temporarily unavailable, the project
+          link still opens the original site.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact section-space" id="contact">
+      <div class="contact-decoration" aria-hidden="true"></div>
+
+      <div class="container contact-inner">
+
+        <div class="section-topline">
+          <span>03 / LET'S CONNECT</span>
+          <span>GOOD THINGS START WITH A CONVERSATION</span>
+        </div>
+
+        <p class="eyebrow">HAVE A PROJECT OR AN IDEA?</p>
+
+        <h2>
+          Let's make something
+          <span>meaningful.</span>
+        </h2>
+
+        <p class="contact-description">
+          Have an opportunity, a project in mind, or just want to say hello?
+          I'd love to hear from you.
+        </p>
+
+        <div class="contact-actions">
+          <a
+            class="button button-primary"
+            href="https://wa.me/2349064261608"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Message me on WhatsApp <span>↗</span>
+          </a>
+
+          <a
+            class="button button-quiet"
+            href="https://github.com/ifeco200"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Explore my GitHub <span>↗</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer container">
+    <a class="logo" href="#home">ifeco<span>.</span></a>
+
+    <p>Designed & built with intention by Ifeco.</p>
+
+    <a href="#home" class="back-top">BACK TO TOP ↑</a>
+
+    <span class="copyright">
+      © <span id="year">2026</span> IFECO
+    </span>
+  </footer>
 
 </body>
 </html>

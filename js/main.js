@@ -1,41 +1,65 @@
-const menuToggle = document.querySelector(".menu-toggle");
-const navMenu = document.querySelector(".nav-links");
+(() => {
+  const menuButton = document.querySelector(".menu-toggle");
+  const menu = document.querySelector("#nav-menu");
+  const year = document.querySelector("#year");
 
-function closeMenu() {
-    navMenu.classList.remove("active");
-    menuToggle.classList.remove("active");
+  // Automatically update the copyright year.
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
 
-    menuToggle.setAttribute("aria-expanded", "false");
-    menuToggle.setAttribute("aria-label", "Open navigation");
+  if (!menuButton || !menu) return;
+
+  // Close the mobile navigation.
+  const closeMenu = () => {
+    menu.classList.remove("is-open");
+    menuButton.classList.remove("active");
+
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "Open navigation");
 
     document.body.classList.remove("menu-open");
-}
+  };
 
-menuToggle.addEventListener("click", () => {
-    const isOpen = navMenu.classList.toggle("active");
+  // Open the mobile navigation.
+  const openMenu = () => {
+    menu.classList.add("is-open");
+    menuButton.classList.add("active");
 
-    menuToggle.classList.toggle("active", isOpen);
-    menuToggle.setAttribute("aria-expanded", isOpen);
-    menuToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Close navigation" : "Open navigation"
-    );
+    menuButton.setAttribute("aria-expanded", "true");
+    menuButton.setAttribute("aria-label", "Close navigation");
 
-    document.body.classList.toggle("menu-open", isOpen);
-});
+    document.body.classList.add("menu-open");
+  };
 
-navMenu.querySelectorAll("a").forEach(link => {
+  // Toggle the hamburger menu.
+  menuButton.addEventListener("click", () => {
+    const isOpen =
+      menuButton.getAttribute("aria-expanded") === "true";
+
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  // Close the menu after clicking a navigation link.
+  menu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeMenu);
-});
+  });
 
-document.addEventListener("keydown", event => {
+  // Close the menu with the Escape key.
+  document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
-        closeMenu();
+      closeMenu();
     }
-});
+  });
 
-window.addEventListener("resize", () => {
-    if (window.innerWidth > 820) {
-        closeMenu();
+  // Close the mobile menu when returning to desktop width.
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 760) {
+      closeMenu();
     }
-});
+  });
+})();
