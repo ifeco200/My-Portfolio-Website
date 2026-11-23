@@ -1,65 +1,79 @@
-(() => {
-  const menuButton = document.querySelector(".menu-toggle");
-  const menu = document.querySelector("#nav-menu");
-  const year = document.querySelector("#year");
+document.addEventListener("DOMContentLoaded", () => {
+  // Mobile navigation
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector(".nav-menu");
+  const navLinks = document.querySelectorAll(".nav-menu a");
 
-  // Automatically update the copyright year.
-  if (year) {
-    year.textContent = new Date().getFullYear();
+  // Open and close hamburger menu
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navMenu.classList.toggle("active");
+
+      menuToggle.classList.toggle("active", isOpen);
+      menuToggle.setAttribute("aria-expanded", isOpen);
+    });
   }
 
-  if (!menuButton || !menu) return;
-
-  // Close the mobile navigation.
-  const closeMenu = () => {
-    menu.classList.remove("is-open");
-    menuButton.classList.remove("active");
-
-    menuButton.setAttribute("aria-expanded", "false");
-    menuButton.setAttribute("aria-label", "Open navigation");
-
-    document.body.classList.remove("menu-open");
-  };
-
-  // Open the mobile navigation.
-  const openMenu = () => {
-    menu.classList.add("is-open");
-    menuButton.classList.add("active");
-
-    menuButton.setAttribute("aria-expanded", "true");
-    menuButton.setAttribute("aria-label", "Close navigation");
-
-    document.body.classList.add("menu-open");
-  };
-
-  // Toggle the hamburger menu.
-  menuButton.addEventListener("click", () => {
-    const isOpen =
-      menuButton.getAttribute("aria-expanded") === "true";
-
-    if (isOpen) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
+  // Close menu after clicking a navigation link
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu?.classList.remove("active");
+      menuToggle?.classList.remove("active");
+      menuToggle?.setAttribute("aria-expanded", "false");
+    });
   });
 
-  // Close the menu after clicking a navigation link.
-  menu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", closeMenu);
+  // Smooth scrolling for internal navigation
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetId = link.getAttribute("href");
+
+      if (!targetId || targetId === "#") return;
+
+      const target = document.querySelector(targetId);
+
+      if (target) {
+        event.preventDefault();
+
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
   });
 
-  // Close the menu with the Escape key.
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      closeMenu();
-    }
-  });
+  // Reveal sections as they enter the viewport
+  const revealElements = document.querySelectorAll(".reveal");
 
-  // Close the mobile menu when returning to desktop width.
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 760) {
-      closeMenu();
-    }
-  });
-})();
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    revealElements.forEach((element) => {
+      revealObserver.observe(element);
+    });
+  } else {
+    revealElements.forEach((element) => {
+      element.classList.add("visible");
+    });
+  }
+
+  // Update copyright year automatically
+  const yearElement = document.querySelector("#year");
+
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  }
+});
